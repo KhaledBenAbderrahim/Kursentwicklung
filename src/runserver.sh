@@ -1,0 +1,1 @@
+C:\Users\khale\OneDrive\Dokumente\GitHub\Kursentwicklung\venv\Scripts\python.exe  C:\Users\khale\OneDrive\Dokumente\GitHub\Kursentwicklung\src\manage.py

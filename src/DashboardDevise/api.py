@@ -14,9 +14,15 @@ def get_rates(currencies, days=30):
         return False, False
 
     api_rates = r.json().get("rates")
-    pprint(api_rates)
+    all_rates = {currency:[] for currency in currencies}
+    all_days = sorted(api_rates.keys())
+    for each_day in all_days:
+        [all_rates[currency].append(rate) for currency,rate in api_rates[each_day].items()]
 
-    return None, None
+
+    return all_days, all_rates
 
 if __name__ == '__main__':
     days , rates = get_rates(currencies=["USD","CAD"])
+    pprint(days)
+    pprint(rates)
