@@ -3,7 +3,7 @@ from pprint import pprint
 
 import requests
 
-def get_rates(currencies, days=30):
+def get_rates(currencies, days):
     end_date = date.today()
     start_date = end_date - timedelta(days=days)
 
@@ -23,6 +23,6 @@ def get_rates(currencies, days=30):
     return all_days, all_rates
 
 if __name__ == '__main__':
-    days , rates = get_rates(currencies=["USD","CAD"])
+    days , rates = get_rates(currencies=["USD","CAD"],days=0)
     pprint(days)
     pprint(rates)
