@@ -23,6 +23,6 @@ def get_rates(currencies, days):
     return all_days, all_rates
 
 if __name__ == '__main__':
-    days , rates = get_rates(currencies=["USD","CAD"],days=0)
+    days , rates = get_rates(currencies=["USD","CAD"],days=1)
     pprint(days)
     pprint(rates)
